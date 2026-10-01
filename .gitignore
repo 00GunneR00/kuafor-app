@@ -1,0 +1,19 @@
+# gizli anahtar içerir
+.mcp.json
+
+# ortam dosyaları
+.env
+.env.*
+
+# bağımlılıklar ve derleme çıktıları
+node_modules/
+.next/
+.expo/
+dist/
+
+.claude/settings.local.json
+.DS_Store
+Thumbs.db
+
+# eski ekran görüntüleri (yenileri tasarimlar/ekran/ altında)
+tasarimlar/*.png

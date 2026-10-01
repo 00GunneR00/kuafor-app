@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kayıt Ol - Örnek Salon</title>
+<!-- Google Fonts: Playfair Display & DM Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            salon: {
+              cream: "#F8F3EE",
+              primary: "#B98B73",
+              primaryHover: "#A87B64",
+              dark: "#2B211C",
+              taupe: "#7A6B63",
+              border: "#E5DDD3",
+              accent: "#E8643C"
+            }
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            serif: ["'Playfair Display'", "serif"],
+            headline: ["'Playfair Display'", "serif"],
+            display: ["'Playfair Display'", "serif"],
+            body: ["'DM Sans'", "sans-serif"],
+            label: ["'DM Sans'", "sans-serif"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 24;
+      font-display: block;
+    }
+    .material-symbols-filled {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-display: block;
+    }
+    /* Smooth focus rings */
+    input:focus {
+      outline: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-salon-cream font-body text-salon-dark antialiased min-h-screen flex justify-center items-start p-0 selection:bg-salon-primary/20 selection:text-salon-dark">
+<!-- Mobile Container (Max-w-md Shell) -->
+<main class="w-full max-w-md min-h-screen bg-salon-cream relative flex flex-col justify-between px-6 pt-5 pb-8 shadow-2xl md:my-6 md:rounded-3xl md:min-h-[844px] md:border md:border-salon-border/60">
+<!-- Top Content Area -->
+<div class="flex flex-col w-full">
+<!-- 1. Top Bar -->
+<header class="flex items-center justify-between h-14 w-full">
+<!-- Back Action -->
+<button aria-label="Geri Dön" class="w-10 h-10 -ml-2 rounded-full flex items-center justify-center text-salon-dark hover:bg-stone-200/50 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<!-- Centered Luxury Salon Brand Mark -->
+<div class="flex flex-col items-center justify-center text-center select-none">
+<span class="font-serif tracking-[0.25em] font-medium text-stone-900 text-sm leading-none pl-1">ÖRNEK</span>
+<span class="font-serif italic text-[10px] tracking-[0.3em] text-stone-500 font-normal mt-1 leading-none pl-1">SALON</span>
+</div>
+<!-- Spacer for True Centering -->
+<div aria-hidden="true" class="w-10 h-10 -mr-2"></div>
+</header>
+<!-- 2. Heading & Subtitle -->
+<section class="mt-6 mb-4">
+<h1 class="font-serif text-3xl font-medium tracking-tight text-salon-dark leading-tight">
+          Aramıza katıl
+        </h1>
+<p class="text-salon-taupe text-sm font-normal mt-2 leading-relaxed">
+          Hesabını oluştur, randevunu saniyeler içinde al ve her ziyarette puan kazan.
+        </p>
+</section>
+<!-- 3. Info Pill / Loyalty Badge -->
+<div class="self-start mb-6">
+<div class="bg-salon-primary/10 text-salon-primary border border-salon-primary/20 rounded-full py-1.5 px-3.5 inline-flex items-center gap-2 text-xs font-medium backdrop-blur-xs">
+<span class="material-symbols-outlined text-base text-salon-primary material-symbols-filled">star</span>
+<span>Her tamamlanan randevuda +50 puan</span>
+</div>
+</div>
+<!-- 4. Form Fields -->
+<form class="space-y-4" onsubmit="event.preventDefault();">
+<!-- Field 1: Ad Soyad -->
+<div class="space-y-1.5">
+<label class="block text-xs font-medium text-salon-dark tracking-wide" for="name">
+            Ad Soyad
+          </label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-stone-400 text-[20px] pointer-events-none select-none">
+              person
+            </span>
+<input class="w-full bg-white text-salon-dark placeholder:text-stone-400 text-sm rounded-xl pl-11 pr-4 py-3.5 border border-salon-border focus:border-salon-primary focus:ring-1 focus:ring-salon-primary transition-all duration-200 shadow-sm" id="name" placeholder="Adın ve soyadın" required="" type="text"/>
+</div>
+</div>
+<!-- Field 2: E-posta -->
+<div class="space-y-1.5">
+<label class="block text-xs font-medium text-salon-dark tracking-wide" for="email">
+            E-posta
+          </label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-stone-400 text-[20px] pointer-events-none select-none">
+              mail
+            </span>
+<input class="w-full bg-white text-salon-dark placeholder:text-stone-400 text-sm rounded-xl pl-11 pr-4 py-3.5 border border-salon-border focus:border-salon-primary focus:ring-1 focus:ring-salon-primary transition-all duration-200 shadow-sm" id="email" placeholder="ornek@mail.com" required="" type="email"/>
+</div>
+</div>
+<!-- Field 3: Telefon -->
+<div class="space-y-1.5">
+<label class="block text-xs font-medium text-salon-dark tracking-wide" for="phone">
+            Telefon
+          </label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-stone-400 text-[20px] pointer-events-none select-none">
+              call
+            </span>
+<input class="w-full bg-white text-salon-dark placeholder:text-stone-400 text-sm rounded-xl pl-11 pr-4 py-3.5 border border-salon-border focus:border-salon-primary focus:ring-1 focus:ring-salon-primary transition-all duration-200 shadow-sm" id="phone" placeholder="05xx xxx xx xx" required="" type="tel"/>
+</div>
+<p class="text-salon-taupe text-[11px] leading-tight px-1 font-normal">
+            Randevunla ilgili sana ulaşabilmemiz için.
+          </p>
+</div>
+<!-- Field 4: Şifre -->
+<div class="space-y-1.5">
+<label class="block text-xs font-medium text-salon-dark tracking-wide" for="password">
+            Şifre
+          </label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-stone-400 text-[20px] pointer-events-none select-none">
+              lock
+            </span>
+<input class="w-full bg-white text-salon-dark placeholder:text-stone-400 text-sm rounded-xl pl-11 pr-11 py-3.5 border border-salon-border focus:border-salon-primary focus:ring-1 focus:ring-salon-primary transition-all duration-200 shadow-sm tracking-widest" id="password" placeholder="••••••••" required="" type="password"/>
+<button aria-label="Şifreyi Göster" class="absolute right-3 text-stone-400 hover:text-salon-dark transition-colors p-1" id="password-toggle" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="password-toggle-icon">visibility</span>
+</button>
+</div>
+<p class="text-salon-taupe text-[11px] leading-tight px-1 font-normal">
+            En az 8 karakter
+          </p>
+</div>
+<!-- 5. Checkbox Rows -->
+<div class="pt-2 space-y-3">
+<!-- Checkbox 1 (zorunlu, ama önceden işaretli değil: onayı kullanıcı kendisi vermeli) -->
+<label class="flex items-start gap-3 cursor-pointer select-none group">
+<input class="sr-only peer" id="kvkk-checkbox" type="checkbox"/>
+<div class="w-5 h-5 mt-0.5 rounded-md border border-salon-border bg-white text-transparent flex items-center justify-center shrink-0 transition-colors peer-checked:bg-salon-primary peer-checked:border-salon-primary peer-checked:text-white peer-focus:ring-2 peer-focus:ring-salon-primary/30">
+<span class="material-symbols-outlined text-sm font-bold leading-none">check</span>
+</div>
+<span class="text-xs text-salon-dark leading-snug">
+<a class="underline text-salon-primary font-medium hover:text-salon-primaryHover" href="#">KVKK Aydınlatma Metni</a>'ni okudum, kabul ediyorum. <span class="text-salon-taupe text-xs">(zorunlu)</span>
+</span>
+</label>
+<!-- Checkbox 2 (Unchecked by default) -->
+<label class="flex items-start gap-3 cursor-pointer select-none group">
+<input class="sr-only peer" id="marketing-checkbox" type="checkbox"/>
+<div class="w-5 h-5 mt-0.5 rounded-md border border-salon-border bg-white text-transparent flex items-center justify-center shrink-0 transition-colors peer-checked:bg-salon-primary peer-checked:border-salon-primary peer-checked:text-white peer-focus:ring-2 peer-focus:ring-salon-primary/30" id="marketing-box">
+<span class="material-symbols-outlined text-sm font-bold leading-none">check</span>
+</div>
+<span class="text-xs text-salon-dark leading-snug">
+              Kampanya ve fırsatlardan bildirim ile haberdar olmak istiyorum. <span class="text-salon-taupe text-xs">(isteğe bağlı)</span>
+</span>
+</label>
+</div>
+<!-- 6. Main Action Button -->
+<div class="pt-4">
+<button class="w-full bg-salon-primary hover:bg-salon-primaryHover text-white font-medium py-3.5 px-6 rounded-full shadow-md shadow-salon-primary/20 active:scale-[0.99] transition-all duration-150 text-sm tracking-wide flex items-center justify-center gap-2" type="submit">
+<span>Kayıt Ol</span>
+</button>
+</div>
+</form>
+</div>
+<!-- 7. Footer Link -->
+<footer class="mt-8 text-center pt-2">
+<p class="text-xs text-salon-taupe font-normal">
+        Zaten hesabın var mı? 
+        <a class="text-salon-primary font-medium hover:underline hover:text-salon-primaryHover transition-colors ml-0.5" href="#">
+          Giriş Yap
+        </a>
+</p>
+</footer>
+</main>
+<script>
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById('password');
+      const toggleIcon = document.getElementById('password-toggle-icon');
+      
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        passwordInput.classList.remove('tracking-widest');
+        toggleIcon.textContent = 'visibility_off';
+      } else {
+        passwordInput.type = 'password';
+        passwordInput.classList.add('tracking-widest');
+        toggleIcon.textContent = 'visibility';
+      }
+    }
+  </script>
+<script>window.ADIM = 13;</script><script src="akis.js"></script>
+</body></html>

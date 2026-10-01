@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Randevun Alındı! - Örnek Salon</title>
+<!-- Google Fonts: Playfair Display & DM Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: "#F8F3EE",
+              primary: "#B98B73",
+              primaryDark: "#A57861",
+              dark: "#2B211C",
+              taupe: "#7A6B63",
+              coral: "#E8643C",
+            }
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "2xl": "1.25rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            headline: ["'Playfair Display'", "serif"],
+            display: ["'Playfair Display'", "serif"],
+            serif: ["'Playfair Display'", "serif"],
+            body: ["'DM Sans'", "sans-serif"],
+            label: ["'DM Sans'", "sans-serif"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #F8F3EE;
+      color: #2B211C;
+      font-family: 'DM Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+      display: inline-block;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#F8F3EE] min-h-screen text-[#2B211C] flex flex-col justify-between selection:bg-[#B98B73]/20">
+<!-- Main Mobile Container -->
+<div class="w-full max-w-md mx-auto min-h-screen flex flex-col relative pb-28">
+<!-- Top Minimal Luxury Header -->
+<header class="pt-5 px-6 pb-2 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-serif italic font-medium text-lg tracking-wide text-[#2B211C]">Örnek Salon</span>
+</div>
+<button aria-label="Kapat" class="w-10 h-10 rounded-full bg-white/80 shadow-sm border border-stone-200/60 flex items-center justify-center text-[#7A6B63] hover:text-[#2B211C] active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="close">close</span>
+</button>
+</header>
+<!-- Main Content Flow -->
+<main class="flex-1 px-5 pt-2 pb-6 flex flex-col">
+<!-- Success Visual Hero -->
+<section class="flex flex-col items-center text-center mt-2 mb-6">
+<div class="relative flex items-center justify-center">
+<!-- Subtle glowing ambient outer ring with soft sparkles decorative effect -->
+<div class="absolute w-24 h-24 rounded-full bg-[#B98B73]/15 animate-pulse"></div>
+<div class="w-20 h-20 rounded-full border-2 border-[#B98B73]/30 flex items-center justify-center bg-[#F8F3EE] relative">
+<!-- Filled Dusty Rose-Brown Circle with Check -->
+<div class="w-14 h-14 rounded-full bg-[#B98B73] shadow-md flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl font-bold" data-icon="check">check</span>
+</div>
+<!-- Delicate Sparkle Accents -->
+<span class="material-symbols-outlined text-[#B98B73] text-sm absolute -top-1 right-1 fill-icon" data-icon="sparkles" data-weight="fill">arrow_back_ios_new</span>
+<span class="material-symbols-outlined text-[#B98B73]/60 text-xs absolute bottom-1 -left-1 fill-icon" data-icon="sparkles" data-weight="fill">arrow_back_ios_new</span>
+</div>
+</div>
+<h1 class="text-3xl font-serif text-[#2B211C] tracking-tight mt-4">Randevun alındı!</h1>
+<p class="text-sm text-[#7A6B63] mt-1.5 font-normal">Seni 26 Eylül'de görmek için sabırsızlanıyoruz.</p>
+</section>
+<!-- Summary Card -->
+<section class="bg-white rounded-2xl shadow-sm border border-stone-200/60 p-5 divide-y divide-stone-100 space-y-3.5 mb-4">
+<!-- Row 1: Hizmet -->
+<div class="flex items-center gap-3.5 pt-1">
+<div class="w-9 h-9 rounded-full bg-[#F8F3EE] flex items-center justify-center text-[#B98B73] flex-shrink-0">
+<span class="material-symbols-outlined text-[19px]" data-icon="content_cut">content_cut</span>
+</div>
+<div class="flex-1">
+<span class="block text-[11px] font-medium tracking-wider text-[#7A6B63] uppercase">Hizmet</span>
+<span class="text-sm font-medium text-[#2B211C]">Fön &amp; Bakım · 45 dk</span>
+</div>
+</div>
+<!-- Row 2: Uzman -->
+<div class="flex items-center gap-3.5 pt-3.5">
+<div class="w-9 h-9 rounded-full bg-[#F8F3EE] flex items-center justify-center text-[#B98B73] flex-shrink-0">
+<span class="material-symbols-outlined text-[19px]" data-icon="person">person</span>
+</div>
+<div class="flex-1">
+<span class="block text-[11px] font-medium tracking-wider text-[#7A6B63] uppercase">Uzman</span>
+<span class="text-sm font-medium text-[#2B211C]">Elif · Baş Kuaför</span>
+</div>
+</div>
+<!-- Row 3: Tarih & Saat -->
+<div class="flex items-center gap-3.5 pt-3.5">
+<div class="w-9 h-9 rounded-full bg-[#F8F3EE] flex items-center justify-center text-[#B98B73] flex-shrink-0">
+<span class="material-symbols-outlined text-[19px]" data-icon="calendar_month">calendar_month</span>
+</div>
+<div class="flex-1">
+<span class="block text-[11px] font-medium tracking-wider text-[#7A6B63] uppercase">Tarih &amp; Saat</span>
+<span class="text-sm font-medium text-[#2B211C]">26 Eylül 2026 Cumartesi, 14:30</span>
+</div>
+</div>
+<!-- Row 4: Adres -->
+<div class="flex items-center justify-between gap-3 pt-3.5">
+<div class="flex items-center gap-3.5">
+<div class="w-9 h-9 rounded-full bg-[#F8F3EE] flex items-center justify-center text-[#B98B73] flex-shrink-0">
+<span class="material-symbols-outlined text-[19px]" data-icon="location_on">location_on</span>
+</div>
+<div>
+<span class="block text-[11px] font-medium tracking-wider text-[#7A6B63] uppercase">Adres</span>
+<span class="text-sm font-medium text-[#2B211C] leading-snug">Örnek Salon, Şehir</span>
+</div>
+</div>
+<button class="inline-flex items-center gap-1 text-xs font-semibold text-[#B98B73] hover:text-[#A57861] py-1 px-2.5 rounded-lg hover:bg-[#B98B73]/10 transition-colors" type="button">
+<span class="material-symbols-outlined text-base" data-icon="directions">directions</span>
+<span>Yol Tarifi</span>
+</button>
+</div>
+<!-- Row 5: Toplam -->
+<div class="flex items-center gap-3.5 pt-3.5">
+<div class="w-9 h-9 rounded-full bg-[#F8F3EE] flex items-center justify-center text-[#B98B73] flex-shrink-0">
+<span class="material-symbols-outlined text-[19px]" data-icon="payments">payments</span>
+</div>
+<div class="flex-1 flex justify-between items-center">
+<div>
+<span class="block text-[11px] font-medium tracking-wider text-[#7A6B63] uppercase">Toplam</span>
+<span class="text-xs text-[#7A6B63]">Ödeme salonda</span>
+</div>
+<span class="text-base font-semibold text-[#2B211C]">450 ₺</span>
+</div>
+</div>
+</section>
+<!-- Loyalty Points Incentive Banner -->
+<div class="rounded-xl bg-[#B98B73]/10 border border-[#B98B73]/25 px-4 py-3 flex items-center gap-3 text-xs text-[#2B211C] mb-3">
+<div class="w-7 h-7 rounded-full bg-white flex items-center justify-center flex-shrink-0 shadow-2xs">
+<span class="material-symbols-outlined text-[#B98B73] text-[18px] fill-icon" data-icon="star" data-weight="fill">star</span>
+</div>
+<p class="leading-tight">
+          Randevun tamamlandığında <span class="font-bold text-[#B98B73]">+50 puan</span> hesabına eklenecek.
+        </p>
+</div>
+<!-- Reminder Notification Notice -->
+<div class="flex items-center gap-2.5 text-xs text-[#7A6B63] px-1 mb-6">
+<span class="material-symbols-outlined text-[#7A6B63] text-base flex-shrink-0" data-icon="notifications_active">notifications_active</span>
+<p class="leading-normal">Randevundan 1 gün ve 2 saat önce sana hatırlatma göndereceğiz.</p>
+</div>
+<!-- Action Buttons Stacked -->
+<div class="flex flex-col gap-3">
+<!-- Secondary Outlined Pill/Rounded-xl Button -->
+<button class="w-full border border-[#B98B73] text-[#B98B73] font-medium py-3.5 rounded-xl flex items-center justify-center gap-2 hover:bg-[#B98B73]/5 active:scale-[0.99] transition" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="event">event</span>
+<span>Takvime Ekle</span>
+</button>
+<!-- Primary Filled Button -->
+<button class="w-full bg-[#B98B73] text-white font-medium py-3.5 rounded-xl shadow-md hover:bg-[#A57861] active:scale-[0.99] transition text-center" type="button">
+          Randevularımı Gör
+        </button>
+<!-- Center Text Link -->
+<div class="text-center pt-1">
+<button class="text-sm text-[#7A6B63] hover:text-[#2B211C] font-medium py-1 transition-colors underline-offset-4 hover:underline" type="button">
+            Ana Sayfaya Dön
+          </button>
+</div>
+</div>
+<!-- Footnote / Policy Note -->
+<div class="mt-4">
+<p class="text-[11px] text-[#7A6B63] leading-relaxed text-center px-4">
+          Randevundan 2 saat öncesine kadar Randevularım sayfasından ücretsiz iptal edebilirsin.
+        </p>
+</div>
+</main>
+<!-- Fixed Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-stone-50/95 backdrop-blur-md border-t border-stone-200/50 shadow-[0_-4px_20px_rgba(43,33,28,0.04)] h-20 px-4 pb-4 max-w-md mx-auto flex justify-around items-center">
+<!-- Ana Sayfa (inactive) -->
+<button class="flex flex-col items-center justify-center text-stone-500 gap-1 hover:text-stone-800 transition-colors duration-150 active:scale-90 flex-1" type="button">
+<span class="material-symbols-outlined text-[22px]" data-icon="home">home</span>
+<span class="font-body text-xs tracking-tight font-medium">Ana Sayfa</span>
+</button>
+<!-- Randevu (ACTIVE coral #E8643C) -->
+<button class="flex flex-col items-center justify-center text-[#E8643C] font-semibold gap-1 transition-transform active:scale-90 flex-1" type="button">
+<span class="material-symbols-outlined text-[22px] fill-icon" data-icon="calendar_month" data-weight="fill">calendar_month</span>
+<span class="font-body text-xs tracking-tight">Randevu</span>
+</button>
+<!-- Keşfet (inactive) -->
+<button class="flex flex-col items-center justify-center text-stone-500 gap-1 hover:text-stone-800 transition-colors duration-150 active:scale-90 flex-1" type="button">
+<span class="material-symbols-outlined text-[22px]" data-icon="search">search</span>
+<span class="font-body text-xs tracking-tight font-medium">Keşfet</span>
+</button>
+<!-- Hesabım (inactive) -->
+<button class="flex flex-col items-center justify-center text-stone-500 gap-1 hover:text-stone-800 transition-colors duration-150 active:scale-90 flex-1" type="button">
+<span class="material-symbols-outlined text-[22px]" data-icon="person">person</span>
+<span class="font-body text-xs tracking-tight font-medium">Hesabım</span>
+</button>
+</nav>
+</div>
+<script>window.ADIM = 5;</script><script src="akis.js"></script>
+</body></html>

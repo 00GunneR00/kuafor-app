@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Örnek Salon</title>
+<!-- Google Fonts: Playfair Display & DM Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#F8F3EE',
+              rose: '#B98B73',
+              'rose-dark': '#A3755E',
+              dark: '#2B211C',
+              taupe: '#7A6B63',
+              coral: '#E8643C',
+              warmgray: '#EFE9E2'
+            }
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "2xl": "1.75rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            body: ['"DM Sans"', 'sans-serif'],
+            sans: ['"DM Sans"', 'sans-serif']
+          },
+          boxShadow: {
+            'soft': '0 8px 30px rgba(43, 33, 28, 0.05)',
+            'hover': '0 12px 35px rgba(185, 139, 115, 0.15)'
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 400;
+    }
+    /* Hide scrollbar for clean horizontal swipe */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#F8F3EE] text-[#2B211C] font-body antialiased selection:bg-[#B98B73] selection:text-white pb-28">
+<!-- Mobile App Frame Container -->
+<div class="max-w-md mx-auto min-h-screen relative flex flex-col bg-[#F8F3EE]">
+<!-- 1. Top Bar (Shared Component specs aligned) -->
+<header class="sticky top-0 z-40 bg-[#F8F3EE]/90 backdrop-blur-md px-5 h-16 flex items-center justify-between transition-all duration-300">
+<!-- Menu Button -->
+<button aria-label="Menü" class="w-10 h-10 rounded-full flex items-center justify-center text-[#2B211C] hover:bg-[#EFE9E2] transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[26px]" data-icon="menu">menu</span>
+</button>
+<!-- Centered Luxury Brand Logo -->
+<div class="text-center flex flex-col items-center">
+<span class="font-serif tracking-[0.22em] text-lg font-bold text-[#2B211C] leading-none uppercase">ÖRNEK</span>
+<span class="font-serif italic text-[10px] tracking-[0.25em] text-[#7A6B63] uppercase mt-0.5">SALON</span>
+</div>
+<!-- Notification Icon with Active Indicator -->
+<button aria-label="Bildirimler" class="w-10 h-10 rounded-full flex items-center justify-center text-[#2B211C] hover:bg-[#EFE9E2] transition-colors relative active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[24px]" data-icon="notifications">notifications</span>
+<span class="absolute top-2.5 right-2.5 w-2 h-2 bg-[#E8643C] rounded-full ring-2 ring-[#F8F3EE]"></span>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="px-5 pt-2 flex flex-col gap-6">
+<!-- 2. Hero Banner Card -->
+<section class="relative rounded-2xl overflow-hidden bg-white shadow-soft group">
+<!-- Visual Background -->
+<div class="h-64 sm:h-72 w-full relative">
+<img alt="Örnek Salon Saç Bakımı" class="w-full h-full object-cover object-[center_20%] transform transition-transform duration-700 group-hover:scale-105" data-alt="Close up editorial beauty shot of an elegant woman with luxuriant, glossy wavy chestnut brown hair shimmering under soft warm salon light. Warm minimalist beige aesthetic, warm tones, high fashion luxury hair studio atmosphere, creamy neutral backdrop, soft diffuse shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2jbepYq-vJKefvAnFQPkiBsgif8gac_iwtFJPUqgm0xZrxQA7sOveVc_6tumo8nDYhRKFth3vszY5aoX2NAMADiGYGsRIwjMQx2PqYBV_2zozQ012SAT0qv6aPy4iadtZxUn3VJ0YUZI9MrTh5iSD8ltAdzwr-5s_Lv9MmMTq4LkgJJGq4lVoUxXzZcXG-Kj47LK-iklfF3NfFrAVewD-U4hJRR2jXHiRmzPWLnC5BIcQnES9B8tFMN94yojjznd65f7RV9Fy2rao"/>
+<!-- Soft Gradient Overlays for Readability -->
+<div class="absolute inset-0 bg-gradient-to-r from-[#2B211C]/85 via-[#2B211C]/45 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#2B211C]/80 via-transparent to-transparent"></div>
+</div>
+<!-- Hero Content Overlay -->
+<div class="absolute inset-0 p-6 flex flex-col justify-end text-white">
+<p class="text-[11px] font-sans uppercase tracking-[0.2em] text-[#EFE9E2] font-medium mb-1.5 opacity-90">
+            SAÇINA İYİ BAK, KENDİNİ DAHA İYİ HİSSET
+          </p>
+<h1 class="font-serif text-3xl font-medium tracking-tight leading-tight text-white mb-4 max-w-[220px]">
+            Daha Güzel<br/><span class="italic font-normal">Bir Sen</span>
+</h1>
+<div>
+<a class="inline-flex items-center gap-2 bg-[#B98B73] hover:bg-[#A3755E] text-white text-sm font-medium px-5 py-2.5 rounded-full shadow-md transition-all duration-200 active:scale-95" href="#randevu">
+<span>Randevu Al</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 3. Quick Action Shortcut Card -->
+<section class="bg-white rounded-2xl p-4 shadow-soft">
+<div class="grid grid-cols-4 gap-2 text-center">
+<!-- Action 1: Hizmetler -->
+<button class="flex flex-col items-center gap-2 group active:scale-95 transition-transform duration-150">
+<div class="w-13 h-13 p-3.5 rounded-full bg-[#F8F3EE] group-hover:bg-[#EFE9E2] text-[#B98B73] transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]" data-icon="content_cut">content_cut</span>
+</div>
+<span class="text-xs font-medium text-[#2B211C] tracking-tight">Hizmetler</span>
+</button>
+<!-- Action 2: Randevu Al -->
+<button class="flex flex-col items-center gap-2 group active:scale-95 transition-transform duration-150">
+<div class="w-13 h-13 p-3.5 rounded-full bg-[#F8F3EE] group-hover:bg-[#EFE9E2] text-[#B98B73] transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]" data-icon="calendar_month">calendar_month</span>
+</div>
+<span class="text-xs font-medium text-[#2B211C] tracking-tight">Randevu Al</span>
+</button>
+<!-- Action 3: Puanlarım -->
+<button class="flex flex-col items-center gap-2 group active:scale-95 transition-transform duration-150">
+<div class="w-13 h-13 p-3.5 rounded-full bg-[#F8F3EE] group-hover:bg-[#EFE9E2] text-[#B98B73] transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]" data-icon="star">star</span>
+</div>
+<span class="text-xs font-medium text-[#2B211C] tracking-tight">Puanlarım</span>
+</button>
+<!-- Action 4: Hesabım -->
+<button class="flex flex-col items-center gap-2 group active:scale-95 transition-transform duration-150">
+<div class="w-13 h-13 p-3.5 rounded-full bg-[#F8F3EE] group-hover:bg-[#EFE9E2] text-[#B98B73] transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]" data-icon="person">person</span>
+</div>
+<span class="text-xs font-medium text-[#2B211C] tracking-tight">Hesabım</span>
+</button>
+</div>
+</section>
+<!-- 4. Loyalty Card "Sadakat Kulübü" -->
+<section class="bg-white rounded-2xl p-5 shadow-soft border border-[#F8F3EE]">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3.5">
+<!-- Crown Icon in Dusty Rose Box -->
+<div class="w-11 h-11 rounded-xl bg-[#F8F3EE] border border-[#B98B73]/20 flex items-center justify-center text-[#B98B73] flex-shrink-0">
+<span class="material-symbols-outlined text-[22px] fill-icon" data-icon="crown">crown</span>
+</div>
+<div>
+<h2 class="font-serif text-lg font-bold text-[#2B211C] leading-snug">Sadakat Kulübü</h2>
+<p class="text-xs text-[#7A6B63] mt-0.5">Her bakım, daha güzel yarınlara.</p>
+</div>
+</div>
+<button class="flex items-center gap-0.5 text-right group">
+<span class="text-sm font-semibold text-[#B98B73]">250 Puan</span>
+<span class="material-symbols-outlined text-[#7A6B63] text-lg group-hover:translate-x-0.5 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<!-- Sleek Progress Bar -->
+<div class="space-y-2">
+<div class="w-full bg-[#F8F3EE] h-2 rounded-full overflow-hidden">
+<div class="bg-[#B98B73] h-full rounded-full transition-all duration-1000 ease-out" style="width: 50%"></div>
+</div>
+<div class="flex justify-end items-center text-[11px] text-[#7A6B63] font-medium">
+<span class="text-[#2B211C] font-normal">Ücretsiz bakıma 250 puan kaldı</span>
+</div>
+</div>
+</section>
+<!-- 5. "Yaklaşan Randevun" Section -->
+<section class="space-y-3">
+<div class="flex items-center justify-between">
+<h2 class="font-serif text-xl font-bold text-[#2B211C]">Yaklaşan Randevun</h2>
+<span class="text-xs font-medium text-[#B98B73] bg-[#B98B73]/10 px-2.5 py-1 rounded-full">Onaylandı</span>
+</div>
+<div class="bg-white rounded-2xl p-4 sm:p-5 shadow-soft border border-[#F8F3EE] flex items-center justify-between hover:border-[#B98B73]/30 transition-colors">
+<div class="flex items-center gap-4">
+<!-- Salon appointment indicator avatar / icon -->
+<div class="w-12 h-12 rounded-2xl bg-[#F8F3EE] flex flex-col items-center justify-center text-[#B98B73] border border-[#B98B73]/15 flex-shrink-0">
+<span class="text-[10px] uppercase font-bold tracking-tight text-[#7A6B63]">EYL</span>
+<span class="text-base font-bold text-[#2B211C] leading-none">28</span>
+</div>
+<div class="space-y-1">
+<h3 class="text-sm font-bold text-[#2B211C] flex items-center gap-1.5">
+                Fön &amp; Bakım
+              </h3>
+<div class="flex flex-wrap items-center gap-y-1 text-xs text-[#7A6B63]">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-[#B98B73]">schedule</span>
+                  Cumartesi, 14:30
+                </span>
+<span class="mx-1.5 opacity-50">·</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-[#B98B73]">face_3</span>
+                  Uzman: Elif
+                </span>
+</div>
+</div>
+</div>
+<button aria-label="Randevu detayları" class="w-8 h-8 rounded-full flex items-center justify-center text-[#7A6B63] hover:text-[#2B211C] hover:bg-[#F8F3EE] transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- 6. "Sana Özel" Section -->
+<section class="space-y-3.5 pb-4">
+<div class="flex items-center justify-between">
+<h2 class="font-serif text-xl font-bold text-[#2B211C]">Sana Özel</h2>
+<a class="text-xs font-semibold text-[#B98B73] hover:text-[#A3755E] flex items-center gap-0.5 tracking-tight" href="#tumunu-gor">
+<span>Tümünü Gör</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<!-- 2-Card Horizontal / Grid Container -->
+<div class="grid grid-cols-2 gap-3.5">
+<!-- Card 1: Saç Bakım Paketleri -->
+<div class="group relative rounded-2xl overflow-hidden bg-white shadow-soft aspect-[4/5] flex flex-col justify-end p-4">
+<img alt="Saç Bakım Paketleri" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Artistic salon photography capturing glossy, radiant healthy hair treatment process, warm atmospheric lighting in a minimalist luxury aesthetic salon interior, cream and warm wood tones, serene feminine elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM6HUTdUZw0skW8aRlvS8H4jUeFWTcESamBlEHAs0dxkL5s7ueN2bN38dTQj5b6RwK6LrEt0sCcGoH1Z3qmQMUF5CffOi_XCllC9ROnPYi7J4bNHs8w_zdgUoYUwWSwW7wCyRJguZnkPtrKK6b_vR2W6M22FHFpM5CxQQfrfUlncYlQ_YAiRur8osyR3ed4W_LrNYzn_d1ii_akJNEpVH9gOD9AjgLUf1NDjLVkR4BuhmxJdU3KqDdHBAAJr5ginwbMRx-8PPiauy4"/>
+<!-- Contrast Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#2B211C]/90 via-[#2B211C]/40 to-transparent"></div>
+<div class="relative z-10 flex items-end justify-between">
+<div>
+<span class="text-[10px] uppercase tracking-wider text-[#EFE9E2] font-medium block mb-0.5">Bakım Serisi</span>
+<h3 class="font-serif text-base font-semibold text-white leading-snug">Saç Bakım Paketleri</h3>
+</div>
+<div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#2B211C] transition-all flex-shrink-0 ml-1">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Özel Kampanyalar -->
+<div class="group relative rounded-2xl overflow-hidden bg-white shadow-soft aspect-[4/5] flex flex-col justify-end p-4">
+<img alt="Özel Kampanyalar" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Luxury organic hair cosmetic bottles arranged aesthetically on a warm cream surface with soft natural shadows, minimalist clean packaging, high-end beauty product presentation, elegant and calming atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7CT-AVZ9KhI-9-X8os-aWvbHp_jUHvAiz4K1IKrS7Joj8PLtYRNuA6X3rmdTf0SrX-Ejp12zLZg6BdpfeiSkA3xJC3WrkmBWl5qN83uAR7NOo0UdNP9XeE0Y13ZcVAaVMboX7BgHVTP_Ck8NYt1iuSKfIFA-0ZhDkLI7_Rdk8nDjMNLFx5l1FFuklbUFoRKhfy4_ntgaEwUrJF3MW6gseoCFOHuGQphBIKKj8NnMVn49toYDjPwMo-Uhe4yu-YF5JID6zi0fHBq7U"/>
+<!-- Contrast Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#2B211C]/90 via-[#2B211C]/40 to-transparent"></div>
+<div class="relative z-10 flex items-end justify-between">
+<div>
+<span class="text-[10px] uppercase tracking-wider text-[#EFE9E2] font-medium block mb-0.5">Fırsatlar</span>
+<h3 class="font-serif text-base font-semibold text-white leading-snug">Özel Kampanyalar</h3>
+</div>
+<div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#2B211C] transition-all flex-shrink-0 ml-1">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- 7. Fixed Bottom Navigation Bar (Following Shared Components Specs & Strict Active State) -->
+<!-- Prohibited top border; using delicate shadow-soft for clean separation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-[#F8F3EE]/95 backdrop-blur-md shadow-[0_-4px_20px_rgba(43,33,28,0.06)] h-20 px-6 pb-4 max-w-md mx-auto flex justify-between items-center">
+<!-- Tab 1: Ana Sayfa (Active - Exact Coral #E8643C) -->
+<a class="flex flex-col items-center justify-center text-[#E8643C] font-semibold gap-1 transition-transform active:scale-90 flex-1" href="#anasayfa">
+<span class="material-symbols-outlined text-[24px] fill-icon" data-icon="home">home</span>
+<span class="font-body text-xs tracking-tight">Ana Sayfa</span>
+</a>
+<!-- Tab 2: Randevu -->
+<a class="flex flex-col items-center justify-center text-[#7A6B63] hover:text-[#2B211C] gap-1 transition-transform active:scale-90 flex-1" href="#randevu">
+<span class="material-symbols-outlined text-[24px]" data-icon="calendar_month">calendar_month</span>
+<span class="font-body text-xs tracking-tight font-medium">Randevu</span>
+</a>
+<!-- Tab 3: Keşfet -->
+<a class="flex flex-col items-center justify-center text-[#7A6B63] hover:text-[#2B211C] gap-1 transition-transform active:scale-90 flex-1" href="#kesfet">
+<span class="material-symbols-outlined text-[24px]" data-icon="search">search</span>
+<span class="font-body text-xs tracking-tight font-medium">Keşfet</span>
+</a>
+<!-- Tab 4: Hesabım -->
+<a class="flex flex-col items-center justify-center text-[#7A6B63] hover:text-[#2B211C] gap-1 transition-transform active:scale-90 flex-1" href="#hesabim">
+<span class="material-symbols-outlined text-[24px]" data-icon="person">person</span>
+<span class="font-body text-xs tracking-tight font-medium">Hesabım</span>
+</a>
+</nav>
+</div>
+<script>window.ADIM = 0;</script><script src="akis.js"></script>
+</body></html>

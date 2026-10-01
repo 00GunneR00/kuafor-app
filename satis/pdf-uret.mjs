@@ -1,0 +1,13 @@
+import puppeteer from "puppeteer-core";
+const EDGE = "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe";
+const [girdi, cikti, onizleme] = process.argv.slice(2);
+const t = await puppeteer.launch({ executablePath: EDGE });
+const s = await t.newPage();
+await s.goto("file:///" + girdi, { waitUntil: "networkidle0" });
+await s.evaluate(() => document.fonts.ready);
+const tasma = await s.evaluate(() => { const p = document.querySelector(".sayfa"); return { scroll: p.scrollHeight, client: p.clientHeight }; });
+console.log("sayfa yüksekliği", tasma);
+await s.pdf({ path: cikti, format: "A4", printBackground: true, preferCSSPageSize: true });
+await s.setViewport({ width: 794, height: 1123, deviceScaleFactor: 1.5 });
+await s.screenshot({ path: onizleme, fullPage: true });
+await t.close();

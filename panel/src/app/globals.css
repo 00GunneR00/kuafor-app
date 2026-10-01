@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* Örnek Salon tasarım değerleri (PLAN.md > Tasarım) */
+@theme inline {
+  --color-krem: #f8f3ee;
+  --color-krem-koyu: #efe7de;
+  --color-cizgi: #e5ddd3;
+  --color-ana: #b98b73;
+  --color-ana-koyu: #a2735b;
+  --color-koyu: #2b211c;
+  --color-taupe: #7a6b63;
+  --color-soluk: #a59990;
+  --color-mercan: #e8643c;
+  --color-tugla: #a0523d;
+  --color-yesil: #557a55;
+  --font-sans: var(--font-dm-sans);
+  --font-serif: var(--font-playfair);
+}
+
+body {
+  background: var(--color-krem);
+  color: var(--color-koyu);
+}

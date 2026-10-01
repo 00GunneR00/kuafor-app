@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Örnek Salon - Uzman Seç</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#F8F3EE',
+              primary: '#B98B73',
+              'primary-dark': '#A3755E',
+              'primary-light': '#F4ECE6',
+              text: '#2B211C',
+              taupe: '#7A6B63',
+              coral: '#E8643C',
+              card: '#FFFFFF',
+              border: '#EFE8E1',
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['DM Sans', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 4px 20px -2px rgba(43, 33, 28, 0.05)',
+            bar: '0 -4px 20px rgba(43, 33, 28, 0.06)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .material-symbols-outlined.fill-1 {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      background-color: #F8F3EE;
+      color: #2B211C;
+      font-family: 'DM Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+<body class="bg-[#F8F3EE] min-h-screen text-[#2B211C]">
+  <div class="max-w-md mx-auto min-h-screen bg-[#F8F3EE] flex flex-col relative pb-44 shadow-xl">
+    
+    <!-- Top Bar -->
+    <header class="sticky top-0 z-40 bg-[#F8F3EE]/90 backdrop-blur-md px-5 pt-12 pb-4 flex items-center justify-between border-b border-[#EFE8E1]/60">
+      <button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#B98B73]/10 active:scale-95 transition-all text-[#2B211C]" aria-label="Geri">
+        <span class="material-symbols-outlined text-[24px]">arrow_back</span>
+      </button>
+      <h1 class="font-serif text-xl font-normal text-[#2B211C] tracking-wide">Randevu Al</h1>
+      <span class="text-xs font-medium text-[#7A6B63] bg-[#EFE8E1] px-2.5 py-1 rounded-full">Adım 2/4</span>
+    </header>
+
+    <!-- Content Container -->
+    <main class="px-5 pt-5 flex-1 flex flex-col">
+
+      <!-- Step Indicator -->
+      <div class="relative flex items-center justify-between mb-6 px-3">
+        <!-- Connecting Line Base -->
+        <div class="absolute left-6 right-6 top-1/2 -translate-y-1/2 h-[2px] bg-[#E5DCD5] z-0"></div>
+        <!-- Active Progress Line (Step 1 to 2) -->
+        <div class="absolute left-6 w-1/3 top-1/2 -translate-y-1/2 h-[2px] bg-[#B98B73] z-0"></div>
+
+        <!-- Step 1: Hizmet (Completed) -->
+        <div class="relative z-10 flex flex-col items-center cursor-pointer group">
+          <div class="w-8 h-8 rounded-full bg-[#B98B73] text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform ring-4 ring-[#F8F3EE]">
+            <span class="material-symbols-outlined text-[18px] font-bold">check</span>
+          </div>
+          <span class="text-[11px] font-medium text-[#B98B73] mt-1.5 underline decoration-[#B98B73]/40 underline-offset-2">Hizmet</span>
+        </div>
+
+        <!-- Step 2: Uzman (Active) -->
+        <div class="relative z-10 flex flex-col items-center">
+          <div class="w-8 h-8 rounded-full bg-[#B98B73] text-white flex items-center justify-center font-medium text-sm shadow-sm ring-4 ring-[#F8F3EE]">
+            2
+          </div>
+          <span class="text-[11px] font-bold text-[#2B211C] mt-1.5">Uzman</span>
+        </div>
+
+        <!-- Step 3: Tarih & Saat (Pending) -->
+        <div class="relative z-10 flex flex-col items-center">
+          <div class="w-8 h-8 rounded-full bg-[#E8DFD8] text-[#7A6B63] flex items-center justify-center text-sm font-medium ring-4 ring-[#F8F3EE]">
+            3
+          </div>
+          <span class="text-[11px] font-normal text-[#7A6B63] mt-1.5">Tarih &amp; Saat</span>
+        </div>
+
+        <!-- Step 4: Onay (Pending) -->
+        <div class="relative z-10 flex flex-col items-center">
+          <div class="w-8 h-8 rounded-full bg-[#E8DFD8] text-[#7A6B63] flex items-center justify-center text-sm font-medium ring-4 ring-[#F8F3EE]">
+            4
+          </div>
+          <span class="text-[11px] font-normal text-[#7A6B63] mt-1.5">Onay</span>
+        </div>
+      </div>
+
+      <!-- Selected Service Summary Chip Row -->
+      <div class="bg-white rounded-2xl p-3.5 mb-6 flex items-center justify-between shadow-soft border border-[#EFE8E1]">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-[#F8F3EE] flex items-center justify-center text-[#B98B73]">
+            <span class="material-symbols-outlined text-[20px]">content_cut</span>
+          </div>
+          <div>
+            <div class="text-[13px] font-medium text-[#2B211C]">Fön &amp; Bakım · 45 dk</div>
+            <div class="text-[12px] font-semibold text-[#B98B73]">450 ₺</div>
+          </div>
+        </div>
+        <button class="text-xs font-medium text-[#B98B73] hover:text-[#A3755E] active:scale-95 transition-all py-1 px-3 bg-[#F8F3EE] rounded-full flex items-center gap-1">
+          Değiştir
+          <span class="material-symbols-outlined text-[14px]">edit</span>
+        </button>
+      </div>
+
+      <!-- Section Title -->
+      <div class="mb-4">
+        <h2 class="font-serif text-2xl text-[#2B211C] tracking-tight">Kimden hizmet almak istersin?</h2>
+        <p class="text-xs text-[#7A6B63] mt-1">Dilediğin uzmanı seçebilir veya en yakın saati tercih edebilirsin.</p>
+      </div>
+
+      <!-- Stylist List -->
+      <div class="space-y-3">
+
+        <!-- 1. Farketmez Card -->
+        <div class="bg-white rounded-2xl p-4 border border-[#EFE8E1] hover:border-[#B98B73]/40 transition-all cursor-pointer flex items-center justify-between shadow-soft">
+          <div class="flex items-center gap-3.5">
+            <div class="w-14 h-14 rounded-full bg-[#F4ECE6] flex items-center justify-center text-[#B98B73] shrink-0 border border-[#EFE8E1]">
+              <span class="material-symbols-outlined text-[26px]">shuffle</span>
+            </div>
+            <div>
+              <h3 class="text-base font-semibold text-[#2B211C]">Farketmez</h3>
+              <p class="text-xs text-[#7A6B63] mt-0.5">En erken uygun uzmanı seçeriz</p>
+              <div class="inline-flex items-center gap-1 text-[11px] font-medium text-[#B98B73] mt-1 bg-[#F8F3EE] px-2 py-0.5 rounded-full">
+                <span class="material-symbols-outlined text-[13px]">bolt</span>
+                Hızlı Randevu
+              </div>
+            </div>
+          </div>
+          <div class="w-6 h-6 rounded-full border-2 border-[#D8CCC4] flex items-center justify-center shrink-0">
+          </div>
+        </div>
+
+        <!-- 2. Elif Card (SELECTED) -->
+        <div class="bg-white rounded-2xl p-4 border-2 border-[#B98B73] relative overflow-hidden transition-all cursor-pointer flex items-center justify-between shadow-md">
+          <div class="absolute top-0 right-0 bg-[#B98B73] text-white text-[10px] font-semibold px-2.5 py-0.5 rounded-bl-lg tracking-wide uppercase">
+            Seçildi
+          </div>
+          <div class="flex items-center gap-3.5">
+            <div class="relative shrink-0">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtfYWm-yxGS0I2uws_mmghOHwAUL-iMaanrAsLTLRXTHZFnyHSeswathFU5YPZg48YpGRh-MEOiLX6KdsUkuNU768TktRYlseMtoBkL8yDQ64hwR1yHR_pHKxHqdsc2YdU7rgqcXw2OakQwg_bhkTFSDG6jVHedRIDucWNbLDfjFQfsZ7zp9wShCYfUIAnovea79Go7eQvsUEysaSrqkBIN8ysvJqlF5-1X47NK2stJS16T4ztML_oVp1ce-Vp5EJ_sjrCyzPShP9j" alt="Elif" class="w-14 h-14 rounded-full object-cover ring-2 ring-[#B98B73] p-0.5" />
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="text-base font-semibold text-[#2B211C]">Elif</h3>
+                <span class="inline-flex items-center gap-0.5 text-xs font-semibold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded-md border border-amber-200/60">
+                  <span class="text-amber-500 text-[12px]">★</span> 4.9
+                </span>
+              </div>
+              <p class="text-xs text-[#7A6B63] mt-0.5">Baş Kuaför</p>
+              <p class="text-[11px] text-[#B98B73] font-medium mt-1">Özel kesim &amp; modern fön uzmanı</p>
+            </div>
+          </div>
+          <div class="w-6 h-6 rounded-full bg-[#B98B73] flex items-center justify-center text-white shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[16px] font-bold">check</span>
+          </div>
+        </div>
+
+        <!-- 3. Zeynep Card -->
+        <div class="bg-white rounded-2xl p-4 border border-[#EFE8E1] hover:border-[#B98B73]/40 transition-all cursor-pointer flex items-center justify-between shadow-soft">
+          <div class="flex items-center gap-3.5">
+            <div class="relative shrink-0">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkXr3xndb50bfrNjhnFXT-mx7kYBwUpzYhT-A8ph2CCw0Sv3IkvfHyW4JT3iIb8t0z3ZJu2qzY7MaZofyElOQ31TNTw1rH_ZqQu25r_nbiHLUCjVAG2sdejP6tfNHXUpg8zLbyjHB8dQRBQlO6lpVX0lYkY4vlXBCFik-b_3dJ-elBHnE24WLAQ4Y_SAy1xmqrBfwEJIpzUjAKnoXfBrahhcYnnfqxORlE6YLx5WURUzW7dqHK9CWmXghK9YOFE_LhJLX42y-FF_rn" alt="Zeynep" class="w-14 h-14 rounded-full object-cover border border-[#EFE8E1]" />
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="text-base font-semibold text-[#2B211C]">Zeynep</h3>
+                <span class="inline-flex items-center gap-0.5 text-xs font-semibold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded-md border border-amber-200/60">
+                  <span class="text-amber-500 text-[12px]">★</span> 4.8
+                </span>
+              </div>
+              <p class="text-xs text-[#7A6B63] mt-0.5">Renk Uzmanı</p>
+              <p class="text-[11px] text-[#7A6B63] mt-1">Ombre, balyaj ve dip boya ustası</p>
+            </div>
+          </div>
+          <div class="w-6 h-6 rounded-full border-2 border-[#D8CCC4] flex items-center justify-center shrink-0">
+          </div>
+        </div>
+
+        <!-- 4. Merve Card -->
+        <div class="bg-white rounded-2xl p-4 border border-[#EFE8E1] hover:border-[#B98B73]/40 transition-all cursor-pointer flex items-center justify-between shadow-soft">
+          <div class="flex items-center gap-3.5">
+            <div class="relative shrink-0">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjeHZCKDC835_0y2nZcYihlpRcKMddzLMt-1TvG6273cOUgQfp4KoCOCSn0FlhClRrOXoEbILJj6uCUk8PkwhbjynHX4PLVZ0OHMklUxyRC-AIlphcwETS2QU0Xdy46RV6cNqvAXaY9n2JMfxNeltQJzAAo9zophYmbKLI28hhHoldjEHEEbrdwPeLmAz6dFB_rVJ297bwZogZmrxOPhaBZgaEVhGovPyYIwZtCbjllWSCG6GedSlUnw3Wh-EHsCUYUXppsuXIDOp4" alt="Merve" class="w-14 h-14 rounded-full object-cover border border-[#EFE8E1]" />
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="text-base font-semibold text-[#2B211C]">Merve</h3>
+                <span class="inline-flex items-center gap-0.5 text-xs font-semibold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded-md border border-amber-200/60">
+                  <span class="text-amber-500 text-[12px]">★</span> 4.8
+                </span>
+              </div>
+              <p class="text-xs text-[#7A6B63] mt-0.5">Kuaför</p>
+              <p class="text-[11px] text-[#7A6B63] mt-1">Özel gün saç tasarımı ve dalgalı fön</p>
+            </div>
+          </div>
+          <div class="w-6 h-6 rounded-full border-2 border-[#D8CCC4] flex items-center justify-center shrink-0">
+          </div>
+        </div>
+
+        <!-- 5. Ayşe Card -->
+        <div class="bg-white rounded-2xl p-4 border border-[#EFE8E1] hover:border-[#B98B73]/40 transition-all cursor-pointer flex items-center justify-between shadow-soft">
+          <div class="flex items-center gap-3.5">
+            <div class="relative shrink-0">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLSWV5tlFVZIE0PF98wHAkxygmaEaS8AjT7IKuTTuCrg6ks9bL_EPVKk8U4PxCIxrzB7jHcNUwiM1hKmNj6hIaXiobGC596k1NPLwkOoarXD3e4NKxUgUm3hbSaK8CrORnoHU36FCPCxFebRCFCTHG1oeIcsEJCcrXt26TLVPakjhoeByPS-ELcXR4dhf9yuSTxp3Xzv0AXwUBVsJiZKzL9kMOoirbkCJKSl_lpqG8U6cC6mwiA641P0cFMIrZiqEl4M5YZjO88VOd" alt="Ayşe" class="w-14 h-14 rounded-full object-cover border border-[#EFE8E1]" />
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="text-base font-semibold text-[#2B211C]">Ayşe</h3>
+                <span class="inline-flex items-center gap-0.5 text-xs font-semibold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded-md border border-amber-200/60">
+                  <span class="text-amber-500 text-[12px]">★</span> 4.7
+                </span>
+              </div>
+              <p class="text-xs text-[#7A6B63] mt-0.5">Bakım Uzmanı</p>
+              <p class="text-[11px] text-[#7A6B63] mt-1">Keratin, nem terapisi ve botoks</p>
+            </div>
+          </div>
+          <div class="w-6 h-6 rounded-full border-2 border-[#D8CCC4] flex items-center justify-center shrink-0">
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- Sticky Bottom Action Bar (Above Nav) -->
+    <div class="fixed bottom-20 left-0 right-0 max-w-md mx-auto z-40 bg-white/95 backdrop-blur-md border-t border-[#EFE8E1] shadow-bar px-5 py-3 rounded-t-2xl">
+      <div class="flex items-center gap-3">
+        <!-- Geri Pill Button -->
+        <button class="flex-1 py-3 px-4 rounded-full border border-[#B98B73] bg-white text-[#B98B73] font-medium text-sm hover:bg-[#F8F3EE] active:scale-98 transition-all flex items-center justify-center gap-1.5">
+          <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+          Geri
+        </button>
+        <!-- Devam Et Pill Button (Wider) -->
+        <button class="flex-[2] py-3 px-5 rounded-full bg-[#B98B73] hover:bg-[#A3755E] text-white font-medium text-sm shadow-md active:scale-98 transition-all flex items-center justify-center gap-2">
+          <span>Devam Et</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Bottom Navigation Bar (4 tabs) -->
+    <nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto z-50 bg-[#F8F3EE]/95 backdrop-blur-md border-t border-[#EFE8E1] flex justify-around items-center h-20 px-2 pb-2">
+      <!-- 1. Ana Sayfa -->
+      <a href="#" class="flex flex-col items-center justify-center text-[#7A6B63] hover:text-[#2B211C] transition-colors py-1 px-3">
+        <span class="material-symbols-outlined text-[24px]">home</span>
+        <span class="text-[11px] font-medium mt-1">Ana Sayfa</span>
+      </a>
+      <!-- 2. Randevu (ACTIVE Coral) -->
+      <a href="#" class="flex flex-col items-center justify-center text-[#E8643C] py-1 px-3">
+        <span class="material-symbols-outlined fill-1 text-[24px]">calendar_month</span>
+        <span class="text-[11px] font-bold mt-1">Randevu</span>
+      </a>
+      <!-- 3. Keşfet -->
+      <a href="#" class="flex flex-col items-center justify-center text-[#7A6B63] hover:text-[#2B211C] transition-colors py-1 px-3">
+        <span class="material-symbols-outlined text-[24px]">search</span>
+        <span class="text-[11px] font-medium mt-1">Keşfet</span>
+      </a>
+      <!-- 4. Hesabım -->
+      <a href="#" class="flex flex-col items-center justify-center text-[#7A6B63] hover:text-[#2B211C] transition-colors py-1 px-3">
+        <span class="material-symbols-outlined text-[24px]">person</span>
+        <span class="text-[11px] font-medium mt-1">Hesabım</span>
+      </a>
+    </nav>
+
+  </div>
+<script>window.ADIM = 2;</script><script src="akis.js"></script>
+</body>
+</html>

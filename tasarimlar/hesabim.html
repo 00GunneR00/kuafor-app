@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Örnek Salon - Hesabım</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#F8F3EE',
+              primary: '#B98B73',
+              'primary-hover': '#A67962',
+              'primary-light': '#F2E8E1',
+              text: '#2B211C',
+              taupe: '#7A6B63',
+              'taupe-light': '#EFEAE4',
+              coral: '#E8643C',
+              brick: '#A0523D'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"DM Sans"', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(43, 33, 28, 0.05)',
+            'nav': '0 -4px 20px rgba(43, 33, 28, 0.04)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      background-color: #F8F3EE;
+      color: #2B211C;
+      font-family: 'DM Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#F8F3EE] flex justify-center text-[#2B211C] antialiased">
+  <main class="w-full max-w-md bg-[#F8F3EE] min-h-screen flex flex-col relative pb-28">
+
+    <!-- Top Bar -->
+    <header class="sticky top-0 z-40 bg-[#F8F3EE]/90 backdrop-blur-md px-6 py-4 border-b border-[#2B211C]/5 flex items-center justify-center">
+      <h1 class="font-serif text-2xl font-normal tracking-wide text-[#2B211C]">Hesabım</h1>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="px-5 pt-4 space-y-4">
+
+      <!-- Profile Header Card -->
+      <section class="bg-white rounded-2xl p-5 shadow-soft border border-[#2B211C]/5 flex items-center justify-between">
+        <div class="flex items-center space-x-3.5">
+          <!-- Avatar -->
+          <div class="w-14 h-14 rounded-full bg-[#B98B73] text-white flex items-center justify-center font-serif text-xl font-medium tracking-wider shadow-sm flex-shrink-0">
+            ZK
+          </div>
+          <div>
+            <h2 class="font-serif text-lg font-medium text-[#2B211C] leading-snug">Zehra Kaya</h2>
+            <p class="text-xs text-[#7A6B63] font-normal leading-relaxed">zehra.kaya@mail.com</p>
+            <p class="text-xs text-[#7A6B63] font-normal">0532 123 45 67</p>
+          </div>
+        </div>
+        <!-- Edit Pill Button -->
+        <button type="button" class="flex items-center space-x-1 px-3 py-1.5 rounded-full border border-[#B98B73] text-[#B98B73] hover:bg-[#B98B73]/5 active:scale-95 transition-all text-xs font-medium">
+          <span class="material-symbols-outlined text-sm leading-none">edit</span>
+          <span>Düzenle</span>
+        </button>
+      </section>
+
+      <!-- Stat Tiles (Side by Side) -->
+      <div class="grid grid-cols-2 gap-3.5">
+        <!-- Puan Tile -->
+        <div class="bg-white rounded-2xl p-4 shadow-soft border border-[#2B211C]/5 flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-xl bg-[#F2E8E1] text-[#B98B73] flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-xl">star</span>
+          </div>
+          <div>
+            <div class="font-serif text-2xl font-semibold text-[#2B211C] leading-tight">250</div>
+            <div class="text-xs text-[#7A6B63] font-medium">Puan</div>
+          </div>
+        </div>
+
+        <!-- Tamamlanan Randevu Tile -->
+        <div class="bg-white rounded-2xl p-4 shadow-soft border border-[#2B211C]/5 flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-xl bg-[#F2E8E1] text-[#B98B73] flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-xl">event_available</span>
+          </div>
+          <div>
+            <div class="font-serif text-2xl font-semibold text-[#2B211C] leading-tight">5</div>
+            <div class="text-xs text-[#7A6B63] font-medium leading-tight">Tamamlanan Randevu</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Group Card: Hesap -->
+      <div class="space-y-1.5">
+        <span class="px-2 text-xs font-semibold uppercase tracking-wider text-[#7A6B63]">Hesap</span>
+        <div class="bg-white rounded-2xl shadow-soft border border-[#2B211C]/5 overflow-hidden divide-y divide-[#2B211C]/5">
+          <!-- Row 1 -->
+          <a href="#" class="w-full flex items-center justify-between p-3.5 hover:bg-[#F8F3EE]/50 active:bg-[#F8F3EE] transition-colors">
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 rounded-full bg-[#EFEAE4] text-[#B98B73] flex items-center justify-center">
+                <span class="material-symbols-outlined text-lg">person</span>
+              </div>
+              <span class="text-sm font-medium text-[#2B211C]">Profil Bilgilerim</span>
+            </div>
+            <span class="material-symbols-outlined text-[#7A6B63] text-lg">chevron_right</span>
+          </a>
+          <!-- Row 2 -->
+          <a href="#" class="w-full flex items-center justify-between p-3.5 hover:bg-[#F8F3EE]/50 active:bg-[#F8F3EE] transition-colors">
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 rounded-full bg-[#EFEAE4] text-[#B98B73] flex items-center justify-center">
+                <span class="material-symbols-outlined text-lg">calendar_month</span>
+              </div>
+              <span class="text-sm font-medium text-[#2B211C]">Randevularım</span>
+            </div>
+            <span class="material-symbols-outlined text-[#7A6B63] text-lg">chevron_right</span>
+          </a>
+          <!-- Row 3 -->
+          <a href="#" class="w-full flex items-center justify-between p-3.5 hover:bg-[#F8F3EE]/50 active:bg-[#F8F3EE] transition-colors">
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 rounded-full bg-[#EFEAE4] text-[#B98B73] flex items-center justify-center">
+                <span class="material-symbols-outlined text-lg">star</span>
+              </div>
+              <span class="text-sm font-medium text-[#2B211C]">Puanlarım</span>
+            </div>
+            <span class="material-symbols-outlined text-[#7A6B63] text-lg">chevron_right</span>
+          </a>
+          <!-- Row 4 -->
+          <a href="#" class="w-full flex items-center justify-between p-3.5 hover:bg-[#F8F3EE]/50 active:bg-[#F8F3EE] transition-colors">
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 rounded-full bg-[#EFEAE4] text-[#B98B73] flex items-center justify-center">
+                <span class="material-symbols-outlined text-lg">lock</span>
+              </div>
+              <span class="text-sm font-medium text-[#2B211C]">Şifre Değiştir</span>
+            </div>
+            <span class="material-symbols-outlined text-[#7A6B63] text-lg">chevron_right</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Menu Group Card: Bildirimler -->
+      <div class="space-y-1.5">
+        <span class="px-2 text-xs font-semibold uppercase tracking-wider text-[#7A6B63]">Bildirimler</span>
+        <div class="bg-white rounded-2xl shadow-soft border border-[#2B211C]/5 overflow-hidden divide-y divide-[#2B211C]/5">
+          <!-- Toggle Row 1: Randevu hatırlatmaları (ON) -->
+          <div class="flex items-center justify-between p-4">
+            <div class="pr-3">
+              <div class="text-sm font-medium text-[#2B211C]">Randevu hatırlatmaları</div>
+              <div class="text-xs text-[#7A6B63] mt-0.5">Randevundan 1 gün ve 2 saat önce</div>
+            </div>
+            <!-- Toggle ON -->
+            <button type="button" role="switch" aria-checked="true" class="w-12 h-6 bg-[#B98B73] rounded-full relative transition-colors cursor-pointer flex-shrink-0 focus:outline-none">
+              <span class="w-5 h-5 bg-white rounded-full absolute top-0.5 right-0.5 shadow-sm transition-transform"></span>
+            </button>
+          </div>
+
+          <!-- Toggle Row 2: Kampanya ve fırsatlar (OFF) -->
+          <div class="flex items-center justify-between p-4">
+            <div class="pr-3">
+              <div class="text-sm font-medium text-[#2B211C]">Kampanya ve fırsatlar</div>
+              <div class="text-xs text-[#7A6B63] mt-0.5">Salonun özel teklifleri</div>
+            </div>
+            <!-- Toggle OFF -->
+            <button type="button" role="switch" aria-checked="false" class="w-12 h-6 bg-[#D8CECA] rounded-full relative transition-colors cursor-pointer flex-shrink-0 focus:outline-none">
+              <span class="w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 shadow-sm transition-transform"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Group Card: Salon -->
+      <div class="space-y-1.5">
+        <span class="px-2 text-xs font-semibold uppercase tracking-wider text-[#7A6B63]">Salon</span>
+        <div class="bg-white rounded-2xl shadow-soft border border-[#2B211C]/5 overflow-hidden divide-y divide-[#2B211C]/5">
+          <!-- Row 1: Adres ve Yol Tarifi -->
+          <a href="#" class="w-full flex items-center justify-between p-3.5 hover:bg-[#F8F3EE]/50 active:bg-[#F8F3EE] transition-colors">
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 rounded-full bg-[#EFEAE4] text-[#B98B73] flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined text-lg">location_on</span>
+              </div>
+              <div class="text-left">
+                <div class="text-sm font-medium text-[#2B211C]">Adres ve Yol Tarifi</div>
+                <div class="text-xs text-[#7A6B63]">Merkez / Şehir</div>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-[#7A6B63] text-lg">chevron_right</span>
+          </a>
+
+          <!-- Row 2: Çalışma Saatleri -->
+          <div class="w-full flex items-center justify-between p-3.5">
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 rounded-full bg-[#EFEAE4] text-[#B98B73] flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined text-lg">schedule</span>
+              </div>
+              <div class="text-left">
+                <div class="text-sm font-medium text-[#2B211C]">Çalışma Saatleri</div>
+                <div class="text-xs text-[#7A6B63]">Pzt–Cmt 09:30–19:00 · Pazar kapalı</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3: Salonu Ara -->
+          <a href="tel:03620000000" class="w-full flex items-center justify-between p-3.5 hover:bg-[#F8F3EE]/50 active:bg-[#F8F3EE] transition-colors">
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 rounded-full bg-[#EFEAE4] text-[#B98B73] flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined text-lg">call</span>
+              </div>
+              <span class="text-sm font-medium text-[#2B211C]">Salonu Ara</span>
+            </div>
+            <span class="material-symbols-outlined text-[#7A6B63] text-lg">chevron_right</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Menu Group Card: Yasal -->
+      <div class="space-y-1.5">
+        <span class="px-2 text-xs font-semibold uppercase tracking-wider text-[#7A6B63]">Yasal</span>
+        <div class="bg-white rounded-2xl shadow-soft border border-[#2B211C]/5 overflow-hidden divide-y divide-[#2B211C]/5">
+          <!-- Row 1: KVKK -->
+          <a href="#" class="w-full flex items-center justify-between p-3.5 hover:bg-[#F8F3EE]/50 active:bg-[#F8F3EE] transition-colors">
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 rounded-full bg-[#EFEAE4] text-[#B98B73] flex items-center justify-center">
+                <span class="material-symbols-outlined text-lg">description</span>
+              </div>
+              <span class="text-sm font-medium text-[#2B211C]">KVKK Aydınlatma Metni</span>
+            </div>
+            <span class="material-symbols-outlined text-[#7A6B63] text-lg">chevron_right</span>
+          </a>
+          <!-- Row 2: Gizlilik -->
+          <a href="#" class="w-full flex items-center justify-between p-3.5 hover:bg-[#F8F3EE]/50 active:bg-[#F8F3EE] transition-colors">
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 rounded-full bg-[#EFEAE4] text-[#B98B73] flex items-center justify-center">
+                <span class="material-symbols-outlined text-lg">policy</span>
+              </div>
+              <span class="text-sm font-medium text-[#2B211C]">Gizlilik Politikası</span>
+            </div>
+            <span class="material-symbols-outlined text-[#7A6B63] text-lg">chevron_right</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Outlined Button: Çıkış Yap -->
+      <div class="pt-2">
+        <button type="button" class="w-full py-3.5 px-4 rounded-full border border-[#B98B73] text-[#B98B73] hover:bg-[#B98B73]/5 active:scale-[0.99] font-medium text-sm flex items-center justify-center space-x-2 transition-all shadow-sm">
+          <span class="material-symbols-outlined text-lg">logout</span>
+          <span>Çıkış Yap</span>
+        </button>
+      </div>
+
+      <!-- Destructive Text Link: Hesabımı Sil -->
+      <div class="text-center pt-1">
+        <button type="button" class="text-xs text-[#A0523D] hover:underline font-medium tracking-wide transition-colors">
+          Hesabımı Sil
+        </button>
+      </div>
+
+      <!-- Sürüm -->
+      <div class="text-center pb-4">
+        <span class="text-[11px] text-[#7A6B63] tracking-wider">Sürüm 1.0.0</span>
+      </div>
+
+    </div>
+
+    <!-- Bottom Navigation Bar (4 tabs, Hesabım active with coral #E8643C) -->
+    <nav class="fixed bottom-0 left-0 right-0 z-50 bg-[#F8F3EE]/95 backdrop-blur-md border-t border-[#2B211C]/10 shadow-nav max-w-md mx-auto">
+      <div class="flex justify-around items-center h-18 px-2 py-2">
+        <!-- 1. Ana Sayfa -->
+        <a href="#" class="flex flex-col items-center justify-center flex-1 py-1 text-[#7A6B63] hover:text-[#2B211C] active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-2xl">home</span>
+          <span class="text-[11px] mt-1 font-medium">Ana Sayfa</span>
+        </a>
+
+        <!-- 2. Randevu -->
+        <a href="#" class="flex flex-col items-center justify-center flex-1 py-1 text-[#7A6B63] hover:text-[#2B211C] active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-2xl">calendar_month</span>
+          <span class="text-[11px] mt-1 font-medium">Randevu</span>
+        </a>
+
+        <!-- 3. Keşfet -->
+        <a href="#" class="flex flex-col items-center justify-center flex-1 py-1 text-[#7A6B63] hover:text-[#2B211C] active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-2xl">search</span>
+          <span class="text-[11px] mt-1 font-medium">Keşfet</span>
+        </a>
+
+        <!-- 4. Hesabım (Active tab with coral #E8643C) -->
+        <a href="#" class="flex flex-col items-center justify-center flex-1 py-1 text-[#E8643C] font-semibold active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-2xl fill-icon">person</span>
+          <span class="text-[11px] mt-1 font-medium">Hesabım</span>
+        </a>
+      </div>
+    </nav>
+
+  </main>
+<script>window.ADIM = 14;</script><script src="akis.js"></script>
+</body>
+</html>

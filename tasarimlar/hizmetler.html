@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Örnek Salon - Hizmetler</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            salon: {
+              cream: "#F8F3EE",
+              primary: "#B98B73",
+              dark: "#2B211C",
+              taupe: "#7A6B63",
+              coral: "#E8643C"
+            }
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            serif: ["'Playfair Display'", "serif"],
+            headline: ["Public Sans", "sans-serif"],
+            display: ["Public Sans", "sans-serif"],
+            body: ["'DM Sans'", "sans-serif"],
+            label: ["'DM Sans'", "sans-serif"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    body {
+      background-color: #F8F3EE;
+      color: #2B211C;
+      font-family: 'DM Sans', sans-serif;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen bg-[#F8F3EE] antialiased selection:bg-[#B98B73]/20 selection:text-[#2B211C]">
+<!-- Mobile Shell Container -->
+<div class="max-w-md mx-auto min-h-screen relative flex flex-col bg-[#F8F3EE] shadow-xl overflow-hidden pb-12">
+<!-- 1. Top App Bar -->
+<header class="sticky top-0 z-40 bg-[#F8F3EE]/90 backdrop-blur-md px-4 h-16 flex items-center justify-between transition-colors">
+<button aria-label="Geri" class="w-10 h-10 flex items-center justify-center rounded-full text-[#2B211C] hover:bg-stone-200/50 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="text-xl font-serif font-bold text-[#2B211C] tracking-wide">
+        Hizmetler
+      </h1>
+<!-- Spacer for visual symmetry -->
+<div aria-hidden="true" class="w-10 h-10"></div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 w-full pt-1">
+<!-- 2. Search Bar -->
+<div class="px-4 mb-3">
+<div class="relative flex items-center w-full">
+<span class="material-symbols-outlined absolute left-4 text-stone-400 text-xl pointer-events-none">
+            search
+          </span>
+<input class="w-full bg-white text-[#2B211C] placeholder-[#7A6B63]/60 pl-11 pr-4 py-2.5 rounded-full border border-stone-200/60 shadow-sm text-sm focus:outline-none focus:ring-2 focus:ring-[#B98B73]/40 focus:border-[#B98B73] transition-all" placeholder="Hizmet ara…" type="text"/>
+</div>
+</div>
+<!-- 3. Horizontal Category Filter Chips -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar px-4 pb-2 mb-4 scroll-smooth">
+<!-- Tümü (Selected) -->
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-xs font-medium bg-[#B98B73] text-white shadow-sm transition-transform active:scale-95 shrink-0" type="button">
+          Tümü
+        </button>
+<!-- Kesim -->
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-xs font-medium bg-white text-[#7A6B63] border border-stone-200 hover:border-[#B98B73]/50 transition-all active:scale-95 shrink-0" type="button">
+          Kesim
+        </button>
+<!-- Fön -->
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-xs font-medium bg-white text-[#7A6B63] border border-stone-200 hover:border-[#B98B73]/50 transition-all active:scale-95 shrink-0" type="button">
+          Fön
+        </button>
+<!-- Boya -->
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-xs font-medium bg-white text-[#7A6B63] border border-stone-200 hover:border-[#B98B73]/50 transition-all active:scale-95 shrink-0" type="button">
+          Boya
+        </button>
+<!-- Bakım -->
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-xs font-medium bg-white text-[#7A6B63] border border-stone-200 hover:border-[#B98B73]/50 transition-all active:scale-95 shrink-0" type="button">
+          Bakım
+        </button>
+<!-- Topuz & Gelin -->
+<button class="whitespace-nowrap px-4 py-2 rounded-full text-xs font-medium bg-white text-[#7A6B63] border border-stone-200 hover:border-[#B98B73]/50 transition-all active:scale-95 shrink-0" type="button">
+          Topuz &amp; Gelin
+        </button>
+</div>
+<!-- 4. Section: Kesim & Fön -->
+<section class="mb-5">
+<h2 class="font-serif text-lg font-semibold text-[#2B211C] mb-2.5 px-4 tracking-tight">
+          Kesim &amp; Fön
+        </h2>
+<div class="mx-4 bg-white rounded-2xl divide-y divide-stone-100 shadow-sm border border-stone-200/50 overflow-hidden">
+<!-- Row 1 -->
+<div class="p-4 flex items-center justify-between hover:bg-stone-50/60 transition-colors cursor-pointer">
+<div class="flex-1 pr-3">
+<h3 class="font-medium text-[#2B211C] text-sm mb-0.5">Kesim &amp; Fön</h3>
+<p class="text-xs text-[#7A6B63] mb-2 leading-relaxed">Yıkama, kesim ve fön</p>
+<div class="flex items-center text-[#7A6B63] text-xs gap-1 font-normal">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>60 dk</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="font-bold text-[#2B211C] text-sm">600 ₺</span>
+<span class="material-symbols-outlined text-stone-300 text-lg">chevron_right</span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="p-4 flex items-center justify-between hover:bg-stone-50/60 transition-colors cursor-pointer">
+<div class="flex-1 pr-3">
+<h3 class="font-medium text-[#2B211C] text-sm mb-0.5">Fön</h3>
+<p class="text-xs text-[#7A6B63] mb-2 leading-relaxed">Yıkama ve fön</p>
+<div class="flex items-center text-[#7A6B63] text-xs gap-1 font-normal">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>30 dk</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="font-bold text-[#2B211C] text-sm">300 ₺</span>
+<span class="material-symbols-outlined text-stone-300 text-lg">chevron_right</span>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="p-4 flex items-center justify-between hover:bg-stone-50/60 transition-colors cursor-pointer">
+<div class="flex-1 pr-3">
+<h3 class="font-medium text-[#2B211C] text-sm mb-0.5">Fön &amp; Bakım</h3>
+<p class="text-xs text-[#7A6B63] mb-2 leading-relaxed">Nem bakımı ve fön</p>
+<div class="flex items-center text-[#7A6B63] text-xs gap-1 font-normal">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>45 dk</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="font-bold text-[#2B211C] text-sm">450 ₺</span>
+<span class="material-symbols-outlined text-stone-300 text-lg">chevron_right</span>
+</div>
+</div>
+<!-- Row 4 -->
+<div class="p-4 flex items-center justify-between hover:bg-stone-50/60 transition-colors cursor-pointer">
+<div class="flex-1 pr-3">
+<h3 class="font-medium text-[#2B211C] text-sm mb-0.5">Perma Fön / Dalga</h3>
+<p class="text-xs text-[#7A6B63] mb-2 leading-relaxed">Kalıcı görünümlü dalgalar</p>
+<div class="flex items-center text-[#7A6B63] text-xs gap-1 font-normal">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>45 dk</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="font-bold text-[#2B211C] text-sm">500 ₺</span>
+<span class="material-symbols-outlined text-stone-300 text-lg">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Section: Boya -->
+<section class="mb-5">
+<h2 class="font-serif text-lg font-semibold text-[#2B211C] mb-2.5 px-4 tracking-tight">
+          Boya
+        </h2>
+<div class="mx-4 bg-white rounded-2xl divide-y divide-stone-100 shadow-sm border border-stone-200/50 overflow-hidden">
+<!-- Row 1 -->
+<div class="p-4 flex items-center justify-between hover:bg-stone-50/60 transition-colors cursor-pointer">
+<div class="flex-1 pr-3">
+<h3 class="font-medium text-[#2B211C] text-sm mb-0.5">Dip Boya</h3>
+<p class="text-xs text-[#7A6B63] mb-2 leading-relaxed">Tek renk dip boya</p>
+<div class="flex items-center text-[#7A6B63] text-xs gap-1 font-normal">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>90 dk</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="font-bold text-[#2B211C] text-sm">1.200 ₺</span>
+<span class="material-symbols-outlined text-stone-300 text-lg">chevron_right</span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="p-4 flex items-center justify-between hover:bg-stone-50/60 transition-colors cursor-pointer">
+<div class="flex-1 pr-3">
+<h3 class="font-medium text-[#2B211C] text-sm mb-0.5">Tüm Boya</h3>
+<p class="text-xs text-[#7A6B63] mb-2 leading-relaxed">Saçın tamamı tek renk</p>
+<div class="flex items-center text-[#7A6B63] text-xs gap-1 font-normal">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>120 dk</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0 text-right">
+<span class="font-bold text-[#2B211C] text-sm">1.800 ₺'den başlayan</span>
+<span class="material-symbols-outlined text-stone-300 text-lg">chevron_right</span>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="p-4 flex items-center justify-between hover:bg-stone-50/60 transition-colors cursor-pointer">
+<div class="flex-1 pr-3">
+<h3 class="font-medium text-[#2B211C] text-sm mb-0.5">Ombre / Balyaj</h3>
+<p class="text-xs text-[#7A6B63] mb-2 leading-relaxed">Doğal geçişli renklendirme</p>
+<div class="flex items-center text-[#7A6B63] text-xs gap-1 font-normal">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>180 dk</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0 text-right">
+<span class="font-bold text-[#2B211C] text-sm">3.500 ₺'den başlayan</span>
+<span class="material-symbols-outlined text-stone-300 text-lg">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Section: Bakım -->
+<section class="mb-5">
+<h2 class="font-serif text-lg font-semibold text-[#2B211C] mb-2.5 px-4 tracking-tight">
+          Bakım
+        </h2>
+<div class="mx-4 bg-white rounded-2xl divide-y divide-stone-100 shadow-sm border border-stone-200/50 overflow-hidden">
+<!-- Row 1 -->
+<div class="p-4 flex items-center justify-between hover:bg-stone-50/60 transition-colors cursor-pointer">
+<div class="flex-1 pr-3">
+<h3 class="font-medium text-[#2B211C] text-sm mb-0.5">Keratin Bakımı</h3>
+<p class="text-xs text-[#7A6B63] mb-2 leading-relaxed">Yıpranmış saçlar için yoğun bakım</p>
+<div class="flex items-center text-[#7A6B63] text-xs gap-1 font-normal">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>120 dk</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="font-bold text-[#2B211C] text-sm">2.000 ₺</span>
+<span class="material-symbols-outlined text-stone-300 text-lg">chevron_right</span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="p-4 flex items-center justify-between hover:bg-stone-50/60 transition-colors cursor-pointer">
+<div class="flex-1 pr-3">
+<h3 class="font-medium text-[#2B211C] text-sm mb-0.5">Saç Botoksu</h3>
+<p class="text-xs text-[#7A6B63] mb-2 leading-relaxed">Dolgunluk ve parlaklık</p>
+<div class="flex items-center text-[#7A6B63] text-xs gap-1 font-normal">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>90 dk</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="font-bold text-[#2B211C] text-sm">1.500 ₺</span>
+<span class="material-symbols-outlined text-stone-300 text-lg">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Section: Topuz & Gelin -->
+<section class="mb-6">
+<h2 class="font-serif text-lg font-semibold text-[#2B211C] mb-2.5 px-4 tracking-tight">
+          Topuz &amp; Gelin
+        </h2>
+<div class="mx-4 bg-white rounded-2xl divide-y divide-stone-100 shadow-sm border border-stone-200/50 overflow-hidden">
+<!-- Row 1 -->
+<div class="p-4 flex items-center justify-between hover:bg-stone-50/60 transition-colors cursor-pointer">
+<div class="flex-1 pr-3">
+<h3 class="font-medium text-[#2B211C] text-sm mb-0.5">Topuz</h3>
+<p class="text-xs text-[#7A6B63] mb-2 leading-relaxed">Özel gün topuzu</p>
+<div class="flex items-center text-[#7A6B63] text-xs gap-1 font-normal">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>45 dk</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="font-bold text-[#2B211C] text-sm">750 ₺</span>
+<span class="material-symbols-outlined text-stone-300 text-lg">chevron_right</span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="p-4 flex items-center justify-between hover:bg-stone-50/60 transition-colors cursor-pointer">
+<div class="flex-1 pr-3">
+<h3 class="font-medium text-[#2B211C] text-sm mb-0.5">Gelin Saçı</h3>
+<p class="text-xs text-[#7A6B63] mb-2 leading-relaxed">Prova dahil</p>
+<div class="flex items-center text-[#7A6B63] text-xs gap-1 font-normal">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>120 dk</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<span class="font-bold text-[#2B211C] text-sm">3.000 ₺</span>
+<span class="material-symbols-outlined text-stone-300 text-lg">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Footnote Notice -->
+<div class="px-4 mb-24 flex items-start gap-2.5 text-xs text-[#7A6B63] leading-relaxed">
+<span class="material-symbols-outlined text-stone-400 text-base mt-0.5 shrink-0">
+          info
+        </span>
+<p>
+          Fiyatlar saç uzunluğu ve yoğunluğuna göre değişebilir. Kesin fiyat salonda belirlenir.
+        </p>
+</div>
+</main>
+<!-- 9. Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-[#F8F3EE]/95 backdrop-blur-md border-t border-stone-200/60 h-20 px-4 pb-4 flex justify-around items-center max-w-md mx-auto shadow-[0_-4px_20px_rgba(43,33,28,0.04)]">
+<!-- Ana Sayfa (Active) -->
+<a class="flex flex-col items-center justify-center text-[#E8643C] font-semibold gap-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">
+          home
+        </span>
+<span class="text-[11px] tracking-tight">Ana Sayfa</span>
+</a>
+<!-- Randevu -->
+<a class="flex flex-col items-center justify-center text-[#7A6B63] hover:text-[#2B211C] gap-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-2xl">
+          calendar_month
+        </span>
+<span class="text-[11px] tracking-tight font-medium">Randevu</span>
+</a>
+<!-- Keşfet -->
+<a class="flex flex-col items-center justify-center text-[#7A6B63] hover:text-[#2B211C] gap-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-2xl">
+          search
+        </span>
+<span class="text-[11px] tracking-tight font-medium">Keşfet</span>
+</a>
+<!-- Hesabım -->
+<a class="flex flex-col items-center justify-center text-[#7A6B63] hover:text-[#2B211C] gap-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-2xl">
+          person
+        </span>
+<span class="text-[11px] tracking-tight font-medium">Hesabım</span>
+</a>
+</nav>
+</div>
+<script>window.ADIM = 9;</script><script src="akis.js"></script>
+</body></html>

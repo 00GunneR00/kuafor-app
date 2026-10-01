@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Örnek Salon - Randevularım</title>
+<!-- Google Fonts: Playfair Display & DM Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            salon: {
+              cream: "#F8F3EE",
+              primary: "#B98B73",
+              dark: "#2B211C",
+              taupe: "#7A6B63",
+              brick: "#A0523D",
+              coral: "#E8643C",
+            }
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            serif: ["'Playfair Display'", "Georgia", "serif"],
+            body: ["'DM Sans'", "sans-serif"],
+            headline: ["'DM Sans'", "sans-serif"],
+            display: ["'Playfair Display'", "serif"],
+            label: ["'DM Sans'", "sans-serif"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-scroll {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-stone-100 text-[#2B211C] font-body antialiased flex justify-center items-center min-h-screen p-0 sm:py-6 select-none">
+<!-- Mobile Container Shell -->
+<div class="relative w-full max-w-md mx-auto min-h-screen bg-[#F8F3EE] flex flex-col">
+<!-- MAIN SCROLLABLE CONTENT (Background / Underlay screen: Randevularım) -->
+<main class="flex-1 overflow-y-auto pt-8 pb-24 px-5 custom-scroll">
+<!-- Screen Header with Primary Action -->
+<div class="flex items-center justify-between mt-2 mb-5">
+<div>
+<h2 class="font-serif text-2xl font-bold text-[#2B211C] tracking-tight">Randevularım</h2>
+<p class="text-xs text-[#7A6B63] mt-0.5">Planlanmış seansların ve geçmiş ziyaretlerin</p>
+</div>
+<button class="flex items-center gap-1.5 bg-[#B98B73] hover:bg-[#a67a63] text-white text-xs font-medium px-3.5 py-2.5 rounded-full shadow-sm transition-all active:scale-95">
+<span class="material-symbols-outlined text-base">add</span>
+<span>Randevu Al</span>
+</button>
+</div>
+<!-- Segmented Pill Filter Tabs -->
+<div class="flex p-1 bg-stone-200/60 rounded-full mb-5">
+<button class="flex-1 py-1.5 rounded-full bg-white text-[#2B211C] text-xs font-medium shadow-sm transition-all text-center">
+          Yaklaşan (2)
+        </button>
+<button class="flex-1 py-1.5 rounded-full text-[#7A6B63] hover:text-[#2B211C] text-xs font-medium transition-all text-center">
+          Geçmiş
+        </button>
+</div>
+<!-- Appointment Card 1: Today -->
+<div class="bg-white rounded-2xl p-4 shadow-sm border border-stone-200/50 mb-3.5">
+<div class="flex items-start justify-between pb-3 border-b border-stone-100">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-[#B98B73]/10 flex flex-col items-center justify-center text-[#B98B73]">
+<span class="text-xs uppercase font-bold tracking-tight">Eyl</span>
+<span class="text-base font-bold leading-none">24</span>
+</div>
+<div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-50 text-emerald-700 mb-1">
+                Bugün · Onaylandı
+              </span>
+<h3 class="font-serif font-bold text-base text-[#2B211C]">Kesim &amp; Fön</h3>
+<p class="text-xs text-[#7A6B63]">Uzman: Zeynep · 15:00 (60 dk)</p>
+</div>
+</div>
+<span class="text-sm font-semibold text-[#2B211C] pt-1">600 ₺</span>
+</div>
+<div class="flex items-center justify-between pt-3">
+<span class="text-xs text-[#7A6B63] flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> Örnek Salon
+          </span>
+<button class="text-xs text-[#B98B73] font-medium hover:underline">Detaylar</button>
+</div>
+</div>
+<!-- Appointment Card 2: Targeted for cancellation -->
+<div class="bg-white rounded-2xl p-4 shadow-sm border border-[#B98B73]/30 mb-3.5 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-[#B98B73]"></div>
+<div class="flex items-start justify-between pb-3 border-b border-stone-100">
+<div class="flex items-center gap-3 pl-1">
+<div class="w-12 h-12 rounded-xl bg-[#F8F3EE] flex flex-col items-center justify-center text-[#2B211C] border border-stone-200/80">
+<span class="text-xs uppercase font-medium tracking-tight text-[#7A6B63]">Cmt</span>
+<span class="text-base font-bold leading-none">26</span>
+</div>
+<div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-50 text-amber-800 mb-1">
+                2 Gün Kaldı
+              </span>
+<h3 class="font-serif font-bold text-base text-[#2B211C]">Fön &amp; Bakım</h3>
+<p class="text-xs text-[#7A6B63]">Uzman: Elif · 14:30 (45 dk)</p>
+</div>
+</div>
+<span class="text-sm font-semibold text-[#2B211C] pt-1">450 ₺</span>
+</div>
+<div class="flex items-center justify-between pt-3 pl-1">
+<span class="text-xs text-[#7A6B63] flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> 26 Eylül Cumartesi
+          </span>
+<div class="flex items-center gap-2">
+<button class="text-xs px-3 py-1 rounded-full border border-stone-300 text-stone-600 font-medium">Değiştir</button>
+<button class="text-xs px-3 py-1 rounded-full bg-rose-50 text-[#A0523D] font-medium">İptal Et</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BOTTOM NAVIGATION BAR (Shared Component Anchor) -->
+<nav class="fixed bottom-0 left-0 right-0 z-10 flex justify-around items-center h-20 px-4 pb-4 max-w-md mx-auto bg-stone-50/95 dark:bg-stone-900/95 backdrop-blur-md shadow-[0_-4px_20px_rgba(43,33,28,0.04)]">
+<!-- 1: Ana Sayfa -->
+<button class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 gap-1 hover:text-stone-800 transition-colors active:scale-90">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="font-body text-xs tracking-tight font-medium">Ana Sayfa</span>
+</button>
+<!-- 2: Randevu (Active Tab) -->
+<button class="flex flex-col items-center justify-center text-[#E8643C] font-semibold gap-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+<span class="font-body text-xs tracking-tight font-medium">Randevu</span>
+</button>
+<!-- 3: Keşfet -->
+<button class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 gap-1 hover:text-stone-800 transition-colors active:scale-90">
+<span class="material-symbols-outlined text-2xl">search</span>
+<span class="font-body text-xs tracking-tight font-medium">Keşfet</span>
+</button>
+<!-- 4: Hesabım -->
+<button class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 gap-1 hover:text-stone-800 transition-colors active:scale-90">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="font-body text-xs tracking-tight font-medium">Hesabım</span>
+</button>
+</nav>
+<!-- ============================================================== -->
+<!-- CANCEL CONFIRMATION BOTTOM SHEET OVERLAY & MODAL DIALOG        -->
+<!-- ============================================================== -->
+<!-- Dimmed Backdrop with Blur -->
+<div class="fixed inset-0 z-40 bg-[rgba(43,33,28,0.48)] backdrop-blur-[2px] transition-opacity"></div>
+<!-- Anchored Modal Sheet -->
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-[32px] shadow-[0_-12px_40px_rgba(43,33,28,0.18)] max-w-md mx-auto flex flex-col pt-3 pb-7 px-6 animate-in slide-in-from-bottom duration-300">
+<!-- Top Center Drag Bar -->
+<div class="w-10 h-1 bg-stone-300 rounded-full mx-auto mb-3"></div>
+<!-- Icon Badge: Soft Muted Brick Circle -->
+<div class="w-14 h-14 rounded-full bg-[#A0523D]/10 flex items-center justify-center mx-auto text-[#A0523D] mb-1">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">event_busy</span>
+</div>
+<!-- Headline -->
+<h3 class="font-serif text-xl font-bold text-[#2B211C] text-center tracking-tight mt-1">
+        Randevunu iptal etmek istiyor musun?
+      </h3>
+<!-- Sub-summary Box -->
+<div class="bg-[#F8F3EE] border border-[#B98B73]/20 rounded-2xl p-3.5 my-3.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-serif font-bold text-sm text-[#2B211C]">Fön &amp; Bakım · Elif</span>
+<span class="text-xs text-[#7A6B63] flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-[#B98B73]">calendar_today</span>
+            26 Eylül 2026 Cumartesi, 14:30
+          </span>
+</div>
+<div class="bg-white/80 border border-[#B98B73]/25 px-2.5 py-1 rounded-full text-xs font-semibold text-[#2B211C] shadow-xs">
+          450 ₺
+        </div>
+</div>
+<!-- Reason Selector Section -->
+<div class="w-full mb-3">
+<label class="block text-[11px] font-semibold uppercase tracking-wider text-[#7A6B63] mb-2">
+          İptal nedeni (isteğe bağlı)
+        </label>
+<div class="flex flex-wrap gap-1.5">
+<button class="border border-stone-200 bg-stone-50/70 hover:bg-stone-100 text-[#2B211C] px-3 py-1.5 rounded-full text-xs font-medium transition-colors">
+            Planım değişti
+          </button>
+<button class="border border-stone-200 bg-stone-50/70 hover:bg-stone-100 text-[#2B211C] px-3 py-1.5 rounded-full text-xs font-medium transition-colors">
+            Başka bir saate alacağım
+          </button>
+<button class="border border-stone-200 bg-stone-50/70 hover:bg-stone-100 text-[#2B211C] px-3 py-1.5 rounded-full text-xs font-medium transition-colors">
+            Hastayım
+          </button>
+<button class="border border-stone-200 bg-stone-50/70 hover:bg-stone-100 text-[#2B211C] px-3 py-1.5 rounded-full text-xs font-medium transition-colors">
+            Diğer
+          </button>
+</div>
+</div>
+<!-- Advisory Note with Info Icon -->
+<div class="flex items-start gap-2 text-xs text-[#7A6B63] leading-relaxed mb-4 bg-amber-50/50 p-2.5 rounded-xl border border-amber-200/50">
+<span class="material-symbols-outlined text-base text-[#B98B73] shrink-0 mt-0.5">info</span>
+<span>Ücretsiz iptal süresi içindesin. İptal işlemi onaylandığında bu randevu saati yeniden rezervasyona açılır.</span>
+</div>
+<!-- Action Buttons (Stacked Vertically) -->
+<div class="flex flex-col w-full">
+<!-- Primary Destructive CTA -->
+<button class="w-full bg-[#A0523D] hover:bg-[#8e4532] text-white font-medium py-3 rounded-full text-sm shadow-md transition-all active:scale-[0.98] text-center">
+          Evet, İptal Et
+        </button>
+<!-- Secondary Neutral CTA -->
+<button class="w-full border-2 border-[#B98B73] hover:bg-[#B98B73]/5 text-[#B98B73] font-medium py-2.5 rounded-full text-sm transition-all active:scale-[0.98] text-center mt-2.5">
+          Vazgeç
+        </button>
+<!-- Alternative Action Link -->
+<button class="text-xs font-medium text-[#B98B73] hover:text-[#936751] underline underline-offset-2 mt-3 text-center transition-colors">
+          Bunun yerine başka bir saate al
+        </button>
+</div>
+</div>
+</div>
+<script>window.ADIM = 8;</script><script src="akis.js"></script>
+</body></html>
