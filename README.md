@@ -1,5 +1,7 @@
 # Kuaför Randevu ve Sadakat Platformu
 
+https://github.com/user-attachments/assets/2a437d70-3f9b-459f-907e-fb06d0f904c2
+
 Tek bir kuaför salonu için hazırlanmış, salonun kendi adıyla yayınlanacak randevu ve sadakat sistemi. Amaç mevcut müşteriyi elde tutmak: müşteri uygulamadan randevu alır, her ziyarette puan kazanır; salon sahibi web panelinden randevuları, ciroyu ve müşterileri yönetir.
 
 Üç parçadan oluşur:
